@@ -51,6 +51,12 @@
       "request": "launch",
       "name": "Async/Await - Await Any Promise",
       "program": "${workspaceRoot}\\async-await\\await-any-promise.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Twitter - Async/Await",
+      "program": "${workspaceRoot}\\latest-tweets\\async-await.js"
     }
   ]
 }

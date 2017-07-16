@@ -8,7 +8,6 @@
   "dependencies": {
     "config": "^1.26.1",
     "mz": "^2.6.0",
-    "twitter": "^1.7.1",
-    "yaml": "^0.3.0"
+    "twitter": "^1.7.1"
   }
 }
