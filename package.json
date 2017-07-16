@@ -1,0 +1,14 @@
+{
+  "name": "async-await-talk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "Chris Antes",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^1.26.1",
+    "mz": "^2.6.0",
+    "twitter": "^1.7.1",
+    "yaml": "^0.3.0"
+  }
+}

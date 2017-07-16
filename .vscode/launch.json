@@ -1,0 +1,56 @@
+{
+  // Use IntelliSense to learn about possible Node.js debug attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Callbacks - Callback Hell",
+      "program": "${workspaceRoot}\\callbacks\\callback-hell.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Callbacks - Refactored Callback Hell",
+      "program": "${workspaceRoot}\\callbacks\\callback-hell-refactored.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Promises - Thens All The Way Down",
+      "program": "${workspaceRoot}\\promises\\thens-all-the-way-down.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Promises - Promise Hell",
+      "program": "${workspaceRoot}\\promises\\promise-hell.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Promises - Forgotten Return",
+      "program": "${workspaceRoot}\\promises\\forgotten-return.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Async/Await - Bliss",
+      "program": "${workspaceRoot}\\async-await\\bliss.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Async/Await - Implicit Promises",
+      "program": "${workspaceRoot}\\async-await\\implicit-promises.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Async/Await - Await Any Promise",
+      "program": "${workspaceRoot}\\async-await\\await-any-promise.js"
+    }
+  ]
+}
