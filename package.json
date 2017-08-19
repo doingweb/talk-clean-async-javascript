@@ -19,6 +19,7 @@
   },
   "jspm": {
     "dependencies": {
+      "jspm/nodelibs-url": "github:jspm/nodelibs-url@^0.1.0",
       "sass": "github:dougludlow/plugin-sass@^0.6.0"
     },
     "devDependencies": {
