@@ -5,9 +5,26 @@
   "main": "server.js",
   "author": "Chris Antes",
   "license": "MIT",
+  "scripts": {
+    "slides": "http-server -o http://localhost:8080/slides"
+  },
   "dependencies": {
     "config": "^1.26.1",
+    "http-server": "^0.10.0",
     "mz": "^2.6.0",
     "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "jspm": "^0.16.53"
+  },
+  "jspm": {
+    "dependencies": {
+      "sass": "github:dougludlow/plugin-sass@^0.6.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }
