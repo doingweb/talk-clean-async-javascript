@@ -3,39 +3,18 @@
   <head>
     <title>My Awesome Presentation</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <!-- TODO: Insert theme!  -->
   </head>
   <body>
-    <textarea id="source">
-class: center, middle
-
-# My Awesome Presentation
-
-???
-
-Notes for the _first_ slide!
-
----
-
-# Agenda
-
-1. Introduction
-2. Deep-dive
-3. ...
-
-[NOTE]: Note that you need remark.js alongside this html file, but no internet connection.
----
-
-# Introduction
-
-    </textarea>
+    <textarea id="source"></textarea>
     <script src="../jspm_packages/system.js"></script>
     <script src="../config.js"></script>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
     <script>
       System.import('./theme.scss!sass');
 
-      var slideshow = remark.create();
+      var slideshow = remark.create({
+        sourceUrl: 'slides.md'
+      });
     </script>
   </body>
 </html>
