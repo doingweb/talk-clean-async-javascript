@@ -1,4 +1,4 @@
-let { hailRide, waitInLine, orderTacos, pay, waitForTacos } = require('./steps'),
+let { hailRide, driveToTacoPlace, waitInLine, orderTacos, pay, waitForTacos } = require('./steps'),
   { giveUp } = require('../util');
 
 console.log('Getting tacos with some nice Promise semantics.');
@@ -7,7 +7,7 @@ goOutForTacos();
 
 function goOutForTacos () {
   return hailRide()
-    .then(rideTo => rideTo('the taco place'))
+    .then(driveToTacoPlace)
     .then(waitInLine)
     .then(orderTacos)
     .then(pay)

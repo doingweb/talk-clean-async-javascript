@@ -1,18 +1,17 @@
 const { TIME_BETWEEN_STEPS, TIME_FOR_TACOS, getNextOrderNumber, wait } = require('../util');
 
-module.exports = { hailRide, waitInLine, orderTacos, pay, waitForTacos };
+module.exports = { hailRide, driveToTacoPlace, waitInLine, orderTacos, pay, waitForTacos };
 
 function hailRide () {
   console.log('Hailing a ride.');
   return wait(TIME_BETWEEN_STEPS)
-    .then(() => console.log('Ride has arrived.'))
-    .then(() => rideTo);
+    .then(() => console.log('Ride has arrived.'));
 }
 
-function rideTo (location) {
-  console.log(`Going to ${location}.`);
+function driveToTacoPlace () {
+  console.log(`Going to taco place.`);
   return wait(TIME_BETWEEN_STEPS)
-    .then(() => console.log(`Made it to ${location}.`));
+    .then(() => console.log(`Made it to taco place.`));
 }
 
 function waitInLine () {
@@ -23,24 +22,18 @@ function waitInLine () {
 
 function orderTacos () {
   console.log('Ordering tacos.');
-  return wait(TIME_BETWEEN_STEPS).then(() => {
-    let tacoCost = 7;
-    console.log(`Taco order is in! They cost $${tacoCost}.`);
-    return tacoCost;
-  });
+  return wait(TIME_BETWEEN_STEPS)
+    .then(() => console.log(`Taco order is in! Money please.`));
 }
 
 function pay (amount) {
-  console.log(`Paying $${amount} for the tacos.`);
-  return wait(TIME_BETWEEN_STEPS).then(() => {
-    let orderNumber = getNextOrderNumber();
-    console.log(`Payment complete. Order number is ${orderNumber}.`);
-    return orderNumber;
-  });
+  console.log(`Paying for the tacos.`);
+  return wait(TIME_BETWEEN_STEPS)
+    .then(() => console.log(`Payment complete. Order number is ${getNextOrderNumber()}.`));
 }
 
 function waitForTacos (orderNumber) {
-  console.log(`Waiting for order #${orderNumber} to be done.`);
+  console.log(`Waiting for tacos to be done.`);
   return wait(TIME_FOR_TACOS)
     .then(() => console.log('Tacos are done!'))
     .then(() => '🌮🌮🌮');

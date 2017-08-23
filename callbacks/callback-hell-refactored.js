@@ -1,4 +1,4 @@
-let { hailRide, waitInLine, orderTacos, pay, waitForTacos } = require('./steps'),
+let { hailRide, driveToTacoPlace, waitInLine, orderTacos, pay, waitForTacos } = require('./steps'),
   { giveUp } = require('../util');
 
 console.log('Getting tacos with callbacks, hold the extra indentation.');
@@ -8,9 +8,9 @@ goOutForTacos();
 function goOutForTacos () {
   hailRide(rideArrived);
 
-  function rideArrived (err, rideTo) {
+  function rideArrived (err) {
     if (err) { giveUp(err); return; }
-    rideTo('the taco place', rideComplete);
+    driveToTacoPlace(rideComplete);
   }
 
   function rideComplete (err) {
@@ -23,14 +23,14 @@ function goOutForTacos () {
     orderTacos(payForTacos);
   }
 
-  function payForTacos (err, costOfTacos) {
+  function payForTacos (err) {
     if (err) { giveUp(err); return; }
-    pay(costOfTacos, paymentComplete);
+    pay(paymentComplete);
   }
 
-  function paymentComplete (err, orderNumber) {
+  function paymentComplete (err) {
     if (err) { giveUp(err); return; }
-    waitForTacos(orderNumber, tacosAreDone);
+    waitForTacos(tacosAreDone);
   }
 
   function tacosAreDone (err, tacos) {

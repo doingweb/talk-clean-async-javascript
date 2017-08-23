@@ -1,20 +1,19 @@
 const { TIME_BETWEEN_STEPS, TIME_FOR_TACOS, giveUp, getNextOrderNumber } = require('../util');
 
-module.exports = { hailRide, waitInLine, orderTacos, pay, waitForTacos };
+module.exports = { hailRide, driveToTacoPlace, waitInLine, orderTacos, pay, waitForTacos };
 
 function hailRide (rideArrivedCallback) {
   console.log('Hailing a ride.');
-
   setTimeout(() => {
     console.log('Ride has arrived');
-    rideArrivedCallback(null, rideTo);
+    rideArrivedCallback();
   }, TIME_BETWEEN_STEPS);
 }
 
-function rideTo (location, rideCompleteCallback) {
-  console.log(`Going to ${location}.`);
+function driveToTacoPlace (rideCompleteCallback) {
+  console.log(`Going to taco place.`);
   setTimeout(() => {
-    console.log(`Made it to ${location}.`);
+    console.log(`Made it to taco place.`);
     rideCompleteCallback();
   }, TIME_BETWEEN_STEPS);
 }
@@ -30,23 +29,21 @@ function waitInLine (readyToOrderCallback) {
 function orderTacos (payForTacosCallback) {
   console.log('Ordering tacos.');
   setTimeout(() => {
-    let tacoCost = 7;
-    console.log(`Taco order is in! They cost $${tacoCost}.`);
-    payForTacosCallback(null, tacoCost);
+    console.log(`Taco order is in! Money please.`);
+    payForTacosCallback();
   }, TIME_BETWEEN_STEPS);
 }
 
-function pay (amount, paymentCompleteCallback) {
-  console.log(`Paying $${amount} for the tacos.`);
+function pay (paymentCompleteCallback) {
+  console.log(`Paying for the tacos.`);
   setTimeout(() => {
-    let orderNumber = getNextOrderNumber();
-    console.log(`Payment complete. Order number is ${orderNumber}.`);
-    paymentCompleteCallback(null, orderNumber);
+    console.log(`Payment complete. Order number is ${getNextOrderNumber()}.`);
+    paymentCompleteCallback();
   }, TIME_BETWEEN_STEPS);
 }
 
-function waitForTacos (orderNumber, tacosCallback) {
-  console.log(`Waiting for order #${orderNumber} to be done.`);
+function waitForTacos (tacosCallback) {
+  console.log(`Waiting for tacos to be done.`);
   setTimeout(() => {
     console.log('Tacos are done!');
     tacosCallback(null, '🌮🌮🌮');

@@ -1,6 +1,6 @@
 module.exports = {
   hailRide: () => Promise.reject('No rides available.'),
-  rideTo: () => Promise.reject('Got a flat tire.'),
+  driveToTacoPlace: () => Promise.reject('Got a flat tire.'),
   waitInLine: () => Promise.reject('They\'re closed!'),
   orderTacos: () => Promise.reject('They\'re out of tacos!'),
   pay: () => Promise.reject('The payment network was down.'),

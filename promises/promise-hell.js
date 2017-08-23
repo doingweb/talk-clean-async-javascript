@@ -1,4 +1,4 @@
-let { hailRide, waitInLine, orderTacos, pay, waitForTacos } = require('./steps'),
+let { hailRide, driveToTacoPlace, waitInLine, orderTacos, pay, waitForTacos } = require('./steps'),
   { giveUp } = require('../util');
 
 console.log('Getting tacos with some pretty gnarly Promise semantics.');
@@ -6,12 +6,12 @@ console.log('Getting tacos with some pretty gnarly Promise semantics.');
 goOutForTacos();
 
 function goOutForTacos () {
-  return hailRide().then(rideTo => {
-    return rideTo('the taco place').then(() => {
+  return hailRide().then(() => {
+    return driveToTacoPlace().then(() => {
       return waitInLine().then(() => {
-        return orderTacos().then(amount => {
-          return pay(amount).then(orderNumber => {
-            return waitForTacos(orderNumber).then(tacos => {
+        return orderTacos().then(() => {
+          return pay().then(() => {
+            return waitForTacos().then(tacos => {
               console.log(`😋🍴 ${tacos}.`)
             });
           });
