@@ -57,6 +57,12 @@
       "request": "launch",
       "name": "Twitter - Async/Await",
       "program": "${workspaceRoot}\\latest-tweets\\async-await.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Twitter - Callbacks and Promises",
+      "program": "${workspaceRoot}\\latest-tweets\\callbacks-and-promises.js"
     }
   ]
 }

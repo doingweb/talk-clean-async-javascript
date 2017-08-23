@@ -4,12 +4,13 @@ const fs = require('mz/fs'),
   twitterApiConfig = require('config').get('twitter');
 
 const usernamesFilePath = path.join(__dirname, 'usernames.txt'),
-  client = new Twitter(twitterApiConfig);
+  twitterClient = new Twitter(twitterApiConfig);
 
 main();
 
 async function main () {
-  let usernames = (await fs.readFile(usernamesFilePath, 'utf8')).trim().split('\n');
+  let fileContents = await fs.readFile(usernamesFilePath, 'utf8');
+  let usernames = fileContents.trim().split('\n');
 
   for (let username of usernames) {
     let latestTweet = await getLatestTweet(username);
@@ -26,7 +27,7 @@ async function getLatestTweet (username) {
     count: 1
   };
 
-  let result = await client.get('statuses/user_timeline', params);
+  let result = await twitterClient.get('statuses/user_timeline', params);
 
   return result[0];
 }
