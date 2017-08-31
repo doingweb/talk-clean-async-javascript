@@ -7,6 +7,12 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Callbacks - Basic",
+      "program": "${workspaceRoot}\\callbacks\\basic.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Callbacks - Callback Hell",
       "program": "${workspaceRoot}\\callbacks\\callback-hell.js"
     },
@@ -15,6 +21,12 @@
       "request": "launch",
       "name": "Callbacks - Refactored Callback Hell",
       "program": "${workspaceRoot}\\callbacks\\callback-hell-refactored.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Promises - Basic",
+      "program": "${workspaceRoot}\\promises\\basic.js"
     },
     {
       "type": "node",
@@ -33,6 +45,12 @@
       "request": "launch",
       "name": "Promises - Forgotten Return",
       "program": "${workspaceRoot}\\promises\\forgotten-return.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Async/Await - Basic",
+      "program": "${workspaceRoot}\\async-await\\basic.js"
     },
     {
       "type": "node",

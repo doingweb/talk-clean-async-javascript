@@ -8,7 +8,9 @@ async function main () {
   let awaitedAnswer = await add(1, 2);
   console.log(`Awaited answer: ${awaitedAnswer}`);
 
-  add(1, 2).then(thennedAnswer => console.log(`Thenned answer: ${thennedAnswer}`));
+  add(1, 2).then(thennedAnswer => {
+    console.log(`Thenned answer: ${thennedAnswer}`);
+  });
 
   let allTheAnswers = await Promise.all([
     add(1, 2),

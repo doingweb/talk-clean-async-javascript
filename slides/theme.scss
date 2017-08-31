@@ -8,3 +8,22 @@ h1, h2, h3 {
   font-weight: normal;
 }
 .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+.right {
+  margin-left: auto;
+}
+
+.text-large {
+  font-size: 3rem;
+}
+
+.speaker {
+  font-style: italic;
+  max-width: 45%;
+}
+
+.small-code {
+  .remark-code {
+    font-size: 0.7em;
+  }
+}
